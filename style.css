@@ -1,4 +1,4 @@
- body {
+/*  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -106,4 +106,143 @@
       font-size: 26px;
     }
   }
-  
+   */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f0f0, #dfe9f3);
+  height: 100vh;
+  margin: 0;
+  background-image: url('./numbers-are-rising.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+  background: rgba(253, 253, 253, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 90%;
+  backdrop-filter: blur(4px);
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 36px;
+  color: #4b2e2e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 3px;
+  margin: 0 auto;
+}
+
+input {
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #a77c7c;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  background-color: #fffdfd;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  border: 2px solid #b67c7c;
+  outline: none;
+  background-color: #fff2f2;
+}
+
+input:nth-child(3n) {
+  border-right: 2px solid #333;
+}
+
+input:nth-child(n + 19):nth-child(-n + 27),
+input:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 2px solid #333;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+button {
+  padding: 12px 22px;
+  margin: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #5e0fc4, #1e63e3);
+  transform: translateY(-2px);
+}
+
+/* ✅ Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  input {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}
+
+/* ✅ Mobile screens (max-width: 500px) */
+@media (max-width: 500px) {
+  .container {
+    padding: 15px;
+    max-width: 320px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  #board {
+    gap: 2px;
+    max-width: 270px;
+  }
+}
