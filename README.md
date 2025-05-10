@@ -1,1 +1,1 @@
-https://sud0kusolverr.netlify.app/playy.html
+https://sud0kusolverr.netlify.app/
